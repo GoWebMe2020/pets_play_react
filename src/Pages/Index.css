@@ -1,0 +1,5 @@
+#home-page {
+  min-height: 100vh;
+  box-sizing: border-box;
+  border: 2px solid orange
+}
