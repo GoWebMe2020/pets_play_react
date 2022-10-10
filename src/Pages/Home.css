@@ -1,34 +1,31 @@
 #home-page {
   min-height: 100vh;
   box-sizing: border-box;
-  border: 2px solid orange
+  background-color: rgb(224, 224, 224)
 }
 
-.billboard {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  min-height: 50vh;
-  border: 2px solid red;
-}
-
-.left-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-}
-
-.right-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-}
-
-.right-box img {
+#carousel  {
+  max-height: 500px;
   width: 80%;
+  border-radius: 10px;
+}
+
+.carousel-item {
+  height: 500px;
+}
+
+.carousel-inner {
+  border-radius: 10px;
+}
+
+.light-background {
+  background-color: #fff;
+}
+
+.carousel-caption {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  color: black !important;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.250);
+  --webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.250);
 }
