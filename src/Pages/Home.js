@@ -1,5 +1,5 @@
 import React from 'react'
-import './Index.css'
+import './Home.css'
 import { faEnvelope as farEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faHouseUser as fasHouseUser } from '@fortawesome/free-solid-svg-icons'
 import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons'

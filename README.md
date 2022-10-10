@@ -71,5 +71,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Dependencies
 
-Bootstrap (https://create-react-app.dev/docs/adding-bootstrap/)
+Bootstrap (https://react-bootstrap.github.io/getting-started/introduction/)
 Fontawesome (https://fontawesome.com/v6/docs/web/use-with/react/style)
