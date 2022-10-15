@@ -1,35 +1,35 @@
 @import "./PresetStyleVariables.scss";
 
 #fun-icon.fa-blue-icon {
-    border: 2px solid $dark-blue;
+    border: 2px solid $blue;
     border-radius: 10px;
   }
 
 .fa-blue-icon svg {
   color: $light-blue;
-  background-color: $dark-blue;
+  background-color: $blue;
   border-radius: 5px;
 }
 
 #fun-icon.fa-green-icon {
-  border: 2px solid $dark-green;
+  border: 2px solid $green;
   border-radius: 10px;
 }
 
 .fa-green-icon svg {
   color: $light-green;
-  background-color: $dark-green;
+  background-color: $green;
   border-radius: 5px;
 }
 
 #fun-icon.fa-pink-icon {
-  border: 2px solid $dark-pink;
+  border: 2px solid $pink;
   border-radius: 10px;
 }
 
 .fa-pink-icon svg {
   color: $light-pink;
-  background-color: $dark-pink;
+  background-color: $pink;
   border-radius: 5px;
 }
 
