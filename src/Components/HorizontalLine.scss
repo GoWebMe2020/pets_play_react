@@ -1,0 +1,16 @@
+@import "./PresetStyleVariables.scss";
+
+#horizontal-line.blue {
+  width: 80%;
+  border-top: 2px solid $dark-blue;
+}
+
+#horizontal-line.green {
+  width: 80%;
+  border-top: 2px solid $dark-green;
+}
+
+#horizontal-line.pink {
+  width: 80%;
+  border-top: 2px solid $dark-pink;
+}

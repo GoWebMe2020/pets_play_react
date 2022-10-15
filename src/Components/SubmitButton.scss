@@ -1,0 +1,18 @@
+@import "./PresetStyleVariables.scss";
+
+#submit-button {
+  display: flex;
+  width: 70%;
+  height: 30px;
+  border: 2px solid $dark-green;
+  border-radius: 10px;
+  background-color: $dark-green;
+  color: #fff;
+  font-weight: bold;
+  transition: ease-in-out 0.3s;
+
+  &:hover {
+    background-color: $light-green;
+    color: $dark-green;
+  }
+}
