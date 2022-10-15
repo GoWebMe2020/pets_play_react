@@ -1,0 +1,18 @@
+.fa-blue-icon {
+  border: 2px solid rgb(99, 189, 231);
+  border-radius: 10px;
+  position: absolute;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.fa-blue-icon .dragging {
+  border: chocolate 1px dotted;
+  opacity: 0.4;
+}
+
+.fa-blue-icon svg {
+  color: rgb(194, 236, 255);
+  background-color: rgb(99, 189, 231);
+  border-radius: 5px;
+}
