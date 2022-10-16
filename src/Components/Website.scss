@@ -26,6 +26,18 @@
     }
   }
 
+  @media screen and (max-width: 992px) {
+    .first-box {
+      .first-box-left {
+        width: 100%;
+      }
+
+      .first-box-right {
+        width: 100%;
+      }
+    }
+  }
+
   @keyframes moveTextRightToLeft {
     0% {
       transform: translateX(200px);

@@ -6,9 +6,9 @@ function Website() {
   return (
     <div
       id="website"
-      className="d-flex flex-column justify-content-start align-items-center py-4 px-2 mb-4"
+      className="d-flex flex-column justify-content-start align-items-center py-2 py-lg-4 px-2 mb-4"
     >
-      <div className="first-box d-flex justify-content-evenly align-items-center px-4 pt-4">
+      <div className="first-box d-flex flex-column flex-lg-row justify-content-evenly align-items-center px-2 px-lg-4 pt-4">
         <div
           id="about"
           className="first-box-left d-flex flex-column justify-content-start align-items-start"
@@ -30,7 +30,7 @@ function Website() {
             purpose (injected humour and the like).
           </p>
         </div>
-        <div className="first-box-right d-flex justify-content-start align-items-start ps-3">
+        <div className="first-box-right d-flex justify-content-start align-items-start ps-lg-3">
           <img
             src="https://images.unsplash.com/photo-1560743173-567a3b5658b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80"
             alt=""
@@ -38,14 +38,14 @@ function Website() {
         </div>
       </div>
 
-      <div className="first-box d-flex justify-content-evenly align-items-center px-4 pt-4">
-        <div className="first-box-right d-flex justify-content-start align-items-start pe-3">
+      <div className="first-box d-flex flex-column flex-lg-row justify-content-evenly align-items-center px-2 px-lg-4 pt-4">
+        <div className="first-box-right d-none d-lg-flex justify-content-start align-items-start pe-3">
           <img
             src="https://images.unsplash.com/photo-1567644495247-9a74521d994d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
             alt=""
           />
         </div>
-        <div className="first-box-left d-flex flex-column justify-content-start align-items-start ps-3">
+        <div className="first-box-left d-flex flex-column justify-content-start align-items-start ps-lg-3">
           <h3>How does it work?</h3>
           <HorizontalLine />
           <p>
@@ -65,7 +65,7 @@ function Website() {
         </div>
       </div>
 
-      <div className="first-box d-flex justify-content-evenly align-items-center px-4 pt-4">
+      <div className="first-box d-flex flex-column flex-lg-row justify-content-evenly align-items-center px-2 px-lg-4 pt-4">
         <div className="first-box-left d-flex flex-column justify-content-start align-items-start">
           <h3>Other options</h3>
           <HorizontalLine />
@@ -84,7 +84,7 @@ function Website() {
             purpose (injected humour and the like).
           </p>
         </div>
-        <div className="first-box-right d-flex justify-content-start align-items-start ps-3">
+        <div className="first-box-right d-flex justify-content-start align-items-start ps-lg-3">
           <img
             src="https://images.unsplash.com/photo-1601980760775-07ce3c710bd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80"
             alt=""
