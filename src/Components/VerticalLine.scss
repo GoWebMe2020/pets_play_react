@@ -1,0 +1,19 @@
+@import "./PresetStyleVariables.scss";
+
+#vertical-line.blue {
+  width: 1px;
+  height: 80%;
+  border-right: 2px solid $blue;
+}
+
+#vertical-line.green {
+  width: 1px;
+  height: 80%;
+  border-right: 2px solid $green;
+}
+
+#vertical-line.pink {
+  width: 1px;
+  height: 80%;
+  border-right: 2px solid $pink;
+}

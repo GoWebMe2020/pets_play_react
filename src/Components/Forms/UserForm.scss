@@ -64,4 +64,10 @@
       cursor: pointer;
     }
   }
+
+  @media screen and (max-width: 992px) {
+    .user-form-right {
+      width: 100%;
+    }
+  }
 }

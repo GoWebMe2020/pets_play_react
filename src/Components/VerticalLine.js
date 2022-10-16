@@ -1,7 +1,7 @@
 import React from 'react'
-import './HorizontalLine.scss'
+import './VerticalLine.scss'
 
-function HorizontalLine(props) {
+function VerticalLine(props) {
   const randomNumber = (min, max) => {
     return Math.floor(Math.random() * (max - min) + min)
   }
@@ -12,7 +12,7 @@ function HorizontalLine(props) {
     return styleArray[style]
   }
 
-  const horizontalLineColor = () => {
+  const verticalLineColor = () => {
     if (props.lineColor === 'dark-green') {
       return 'green'
     } else {
@@ -20,9 +20,7 @@ function HorizontalLine(props) {
     }
   }
 
-  return (
-    <div id="horizontal-line" className={`${horizontalLineColor()} mb-3`}></div>
-  )
+  return <div id="vertical-line" className={`${verticalLineColor()}`}></div>
 }
 
-export default HorizontalLine
+export default VerticalLine
