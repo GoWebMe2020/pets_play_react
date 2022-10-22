@@ -6,8 +6,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import { faPaw } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Home from './Pages/Home'
-import About from './Pages/About'
-import Contact from './Pages/Contact'
+import MyProfile from './Pages/MyProfile'
 
 function App() {
   return (
@@ -25,10 +24,10 @@ function App() {
                   <Nav.Link as={Link} to={'/'} href="/">
                     Home
                   </Nav.Link>
-                  {/* <Nav.Link as={Link} to={'/about'} href="/about">
-                    About
+                  <Nav.Link as={Link} to={'/myprofile'} href="/myprofile">
+                    My Profile
                   </Nav.Link>
-                  <Nav.Link as={Link} to={'/contact'} href="/contact">
+                  {/* <Nav.Link as={Link} to={'/contact'} href="/contact">
                     Contact
                   </Nav.Link> */}
                 </Nav>
@@ -39,8 +38,7 @@ function App() {
         <div>
           <Routes>
             <Route excat path="/" element={Home()}></Route>
-            {/* <Route exact path="/about" element={About()}></Route>
-            <Route exact path="/contact" element={Contact()}></Route> */}
+            <Route exact path="/myprofile" element={MyProfile()}></Route>
           </Routes>
         </div>
       </Router>
