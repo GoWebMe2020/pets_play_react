@@ -21,8 +21,6 @@ function Footer() {
       : setScreenWidth(false)
   })
 
-  console.log(screenWidth)
-
   return (
     <footer className="d-flex flex-column flex-md-row justify-content-evenly align-items-center">
       <div className="d-flex flex-column justify-content-center align-items-start footer-left ps-md-3">
