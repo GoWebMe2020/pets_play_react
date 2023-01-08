@@ -2,7 +2,8 @@ import React from 'react';
 import axios from "axios";
 import { useState } from 'react';
 import SubmitButton from '../SubmitButton';
-import Flash from '../Notifications/Flash'
+import { ToastContainer, Flip, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { faAt } from '@fortawesome/free-solid-svg-icons';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
@@ -31,6 +32,14 @@ function RegistrationForm() {
     setPasswordConfirmation(event.target.value)
   }
 
+  const notify = (type, message) => {
+    if (type === 'success') {
+      toast.success(message);
+    } else if (type === 'error') {
+      toast.error(message);
+    }
+  }
+
   const submitRegistrationForm = (event) => {
     event.preventDefault();
     axios.post("http://localhost:3000/registrations", {
@@ -45,7 +54,14 @@ function RegistrationForm() {
         setEmail("")
         setPassword("")
         setPasswordConfirmation("")
+        notify('success', res.data.message)
+      } else {
+        setUserLoggedIn(false)
+        notify('error', res.data.message)
       }
+    }).catch(error => {
+      setUserLoggedIn(false)
+      notify('error', "Oops, something went wrong. Please refresh and try again.")
     })
   }
 
@@ -115,6 +131,19 @@ function RegistrationForm() {
 
         <SubmitButton />
       </form>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+        transition={Flip}
+        />
     </>
   )
 }
