@@ -1,12 +1,14 @@
 import React from 'react'
 import './SubmitButton.scss'
 
-function SubmitButton() {
+function SubmitButton(props) {
   return (
+
     <button
-      type="submit"
-      className="d-flex justify-content-center align-items-center shadow-lg"
+      type={props.type}
+      className={'d-flex justify-content-center align-items-center shadow-lg'}
       id="submit-button"
+      disabled={props.disabled}
     >
       Submit
     </button>

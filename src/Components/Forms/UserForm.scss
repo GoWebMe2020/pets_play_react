@@ -18,6 +18,13 @@
     }
   }
 
+  .warning-text {
+    color: red;
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+  }
+
   .user-form-right {
     width: 45%;
     min-height: 550px;
@@ -28,7 +35,6 @@
 
       .form-group {
         width: 100%;
-        border-bottom: 2px solid #b7b7b7;
 
         svg {
           color: #b7b7b7;
@@ -41,6 +47,16 @@
             cursor: pointer;
           }
         }
+      }
+
+      .input-border {
+        width: 100%;
+        border-bottom: 2px solid #b7b7b7;
+      }
+
+      .input-border-warning {
+        width: 100%;
+        border-bottom: 2px solid red;
       }
 
       input {

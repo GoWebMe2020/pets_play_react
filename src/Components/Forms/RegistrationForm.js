@@ -16,6 +16,12 @@ function RegistrationForm() {
   const [passwordConfirmation, setPasswordConfirmation] = useState("")
   const [userLoggedIn, setUserLoggedIn] = useState(false)
 
+  // Password validity variables
+  const [passwordMatchError, setPasswordMatchError] = useState('')
+  const [inputBorder, setInputBorder] = useState("input-border")
+  const [passwordValid, setPasswordValid] = useState(true)
+
+  // Handle form submit functions
   const showPassword = () => {
     setPasswordShown(!passwordShown)
   }
@@ -30,14 +36,7 @@ function RegistrationForm() {
 
   const handlePasswordConfirmationChange = (event) => {
     setPasswordConfirmation(event.target.value)
-  }
-
-  const notify = (type, message) => {
-    if (type === 'success') {
-      toast.success(message);
-    } else if (type === 'error') {
-      toast.error(message);
-    }
+    validatePassword(event.target.value)
   }
 
   const submitRegistrationForm = (event) => {
@@ -65,14 +64,35 @@ function RegistrationForm() {
     })
   }
 
+  // Flash notification call function
+  const notify = (type, message) => {
+    if (type === 'success') {
+      toast.success(message);
+    } else if (type === 'error') {
+      toast.error(message);
+    }
+  }
+
+  // Password validation function
+  const validatePassword = (passwordConfirmationValue) => {
+    if (password !== passwordConfirmationValue) {
+      setPasswordValid(false)
+      setInputBorder("input-border-warning")
+      setPasswordMatchError("Your password and password confirmation do not match")
+    } else if (password === passwordConfirmationValue) {
+      setPasswordValid(true)
+      setInputBorder("input-border")
+      setPasswordMatchError('')
+    }
+  }
+
   return (
     <>
       <form
         className="d-flex flex-column justify-content-start align-items-center"
         onSubmit={submitRegistrationForm}
       >
-
-        <div className="form-group mb-3">
+        <div className={'form-group input-border mb-3'}>
           <label className="mb-2" htmlFor="email">
             Email
           </label>
@@ -90,7 +110,7 @@ function RegistrationForm() {
           </div>
         </div>
 
-        <div className="form-group mb-3">
+        <div className={`form-group ${inputBorder} mb-3`}>
           <label className="mb-2" htmlFor="password">
             Password
           </label>
@@ -99,9 +119,9 @@ function RegistrationForm() {
               type={passwordShown ? 'text' : 'password'}
               className="form-control"
               id="password"
-              value={password}
               required
               onChange={handlePasswordChange}
+              value={password}
             />
             <FontAwesomeIcon
               icon={faEye}
@@ -112,7 +132,7 @@ function RegistrationForm() {
           </div>
         </div>
 
-        <div className="form-group mb-3">
+        <div className={`form-group ${inputBorder} mb-3`}>
           <label className="mb-2" htmlFor="password_confirmation">
             Password Confirmation
           </label>
@@ -121,15 +141,17 @@ function RegistrationForm() {
               type="password"
               className="form-control"
               id="password_confirmation"
-              value={passwordConfirmation}
               required
               onChange={handlePasswordConfirmationChange}
+              value={passwordConfirmation}
             />
             <FontAwesomeIcon icon={faLock} size="lg" className="p-1" />
           </div>
         </div>
-
-        <SubmitButton />
+        {passwordMatchError && <small className='mb-3 warning-text'>{passwordMatchError}</small>}
+        <SubmitButton
+          type='submit' disabled={!passwordValid}
+        />
       </form>
       <ToastContainer
         position="top-right"

@@ -10,7 +10,7 @@ function LoginForm() {
       className="d-flex flex-column justify-content-start align-items-center"
       action=""
     >
-      <div className="form-group mb-4">
+      <div className="form-group input-border mb-4">
         <label className="mb-2" htmlFor="email">
           Email
         </label>
@@ -27,7 +27,7 @@ function LoginForm() {
         </div>
       </div>
 
-      <div className="form-group mb-4">
+      <div className="form-group input-border mb-4">
         <label className="mb-2" htmlFor="password">
           Password
         </label>

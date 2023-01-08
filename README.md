@@ -73,3 +73,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 Bootstrap (https://react-bootstrap.github.io/getting-started/introduction/)
 Fontawesome (https://fontawesome.com/v6/docs/web/use-with/react/style)
+React-Toastify (https://fkhadra.github.io/react-toastify/introduction)
